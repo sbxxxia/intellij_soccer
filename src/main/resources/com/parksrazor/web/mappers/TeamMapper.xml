@@ -1,0 +1,20 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.parksrazor.web.mappers.TeamMapper">
+    <select id="selectAll" resultType="com.parksrazor.web.domains.TeamDTO">
+        select
+            team_id teamId,
+            region_name regionName,
+            team_name teamName,
+            e_team_name eTeamName,
+            orig_yyyy origYyyy,
+            zip_code1 zipCode1,
+            zip_code2 zipCode2,
+            address, ddd, tel, fax,
+            homepage, owner,
+            stadium_id stadiumId
+        from team
+    </select>
+</mapper>
