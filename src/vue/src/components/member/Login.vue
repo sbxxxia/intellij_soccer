@@ -34,8 +34,8 @@
     export default {
         computed : {
             ...mapState({
-                fail: state => state.fail,
-                auth: state => state.player.auth()
+                fail: state => state.player.fail,
+                auth: state => state.player.auth
             })
 
         },
@@ -49,7 +49,7 @@
         methods: {
             login(){
                 alert('유저 아이디: '+this.userid)
-                this.$store.dispatch('player/login',{playerId: this.userid, backNo: this.passwd})
+                this.$store.dispatch('player/login', {playerId: '2000003', backNo: '40'})
 
             },
             moveToPasswd(){
